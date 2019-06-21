@@ -1,5 +1,6 @@
 package com.weiweijin.burn.profile;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -18,16 +19,16 @@ public class Profile {
 	private int height;
 	private int age;
 	@Id
-	private Date date;
+	private LocalDateTime date;
 	
 	public Profile() {
 	
 	}
-	public Date getDate() {
+	public LocalDateTime getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDateTime date) {
 		this.date = date;
 	}
 

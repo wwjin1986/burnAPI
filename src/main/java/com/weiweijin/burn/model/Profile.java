@@ -1,17 +1,19 @@
 package com.weiweijin.burn.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Profile {
 
+	@Id
 	private String name;
 	private int weight;
 	private int height;
 	private int age;
 	
-	public Profile(String name, int weight, int height, int age) {
-		this.name = name;
-		this.weight = weight;
-		this.height = height;
-		this.age = age;
+	public Profile() {
+	
 	}
 	
 	public String getName() {

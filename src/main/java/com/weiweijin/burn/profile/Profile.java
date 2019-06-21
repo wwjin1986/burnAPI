@@ -1,21 +1,36 @@
 package com.weiweijin.burn.profile;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.xml.crypto.Data;
 
-@Entity
+@Entity 
+@IdClass(ProjectId.class)
 public class Profile {
 
 	@Id
 	private String name;
+	@Id
 	private int weight;
 	private int height;
 	private int age;
+	@Id
+	private Date date;
 	
 	public Profile() {
 	
 	}
-	
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 	public String getName() {
 		return name;
 	}

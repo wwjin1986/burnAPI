@@ -1,4 +1,4 @@
-package com.weiweijin.burn.resource;
+package com.weiweijin.burn.profile;
 
 import java.util.List;
 
@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.weiweijin.burn.model.Profile;
-import com.weiweijin.burn.service.ProfileService;
-
 @RestController
 public class profileResource {
 	
 	@Autowired
 	private ProfileService profileService;
 	
-	@GetMapping
-	public List getProfile() {
-		return profileService.getProfile();
+	@RequestMapping("/profiles")
+	public List getProfiles() {
+		return profileService.getProfiles();
 	}
 	
-	@RequestMapping(method=RequestMethod.POST, value="/profile")
+	@RequestMapping(method=RequestMethod.POST, value="/profiles")
 	public void addProfile(@RequestBody Profile profile) {
 		profileService.addProfile(profile);
-		System.out.println("post");
 	}
 	
+	@RequestMapping(method=RequestMethod.DELETE, value="/profiles")
+	public void deleteProfile(@RequestBody Profile profile) {
+		profileService.deleteProfile(profile);
+	}
 	
 }

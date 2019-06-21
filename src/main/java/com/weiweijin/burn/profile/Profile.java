@@ -1,4 +1,4 @@
-package com.weiweijin.burn.model;
+package com.weiweijin.burn.profile;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

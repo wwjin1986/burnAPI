@@ -22,4 +22,8 @@ public class WeightService {
 	public void addNewWeight(Weight weight) {
 		weightRepository.save(weight);
 	}
+	
+	public void deleteWeightRecord(Long id) {
+		weightRepository.deleteById(id);;
+	}
 }

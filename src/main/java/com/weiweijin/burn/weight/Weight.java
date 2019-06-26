@@ -2,19 +2,30 @@ package com.weiweijin.burn.weight;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 
 @Entity
-@IdClass(WeightPrimaryId.class)
 public class Weight {
 
 	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	private Long id;
 	private String name;
-	@Id
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	private int weight;
-	@Id
+	
 	private LocalDateTime time;
 	
 	public Weight() {

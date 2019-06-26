@@ -9,27 +9,22 @@ import javax.persistence.IdClass;
 import javax.xml.crypto.Data;
 
 @Entity 
-@IdClass(ProjectId.class)
 public class Profile {
 
 	@Id
 	private String name;
-	@Id
 	private int weight;
 	private int height;
 	private int age;
-	@Id
-	private LocalDateTime date;
 	
 	public Profile() {
 	
 	}
-	public LocalDateTime getDate() {
-		return date;
-	}
-
-	public void setDate(LocalDateTime date) {
-		this.date = date;
+	public Profile(String name, int weight, int height, int age) {
+		this.name = name;
+		this.weight = weight;
+		this.height = height;
+		this.age = age;
 	}
 
 	public String getName() {

@@ -2,6 +2,7 @@ package com.weiweijin.burn.profile;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,4 +27,8 @@ public class ProfileService {
 		profileRepository.delete(profile);
 	}
 	
+	public Profile getProfileByName(String name) {
+		//get null when Profile not found
+		return profileRepository.findById(name).orElse(null);
+	}
 }

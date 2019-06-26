@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +21,11 @@ public class profileResource {
 	@RequestMapping("/profiles")
 	public List getProfiles() {
 		return profileService.getProfiles();
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, value ="/profiles/{name}")
+	public Profile getProfileByName(@PathVariable String name) {
+		return profileService.getProfileByName(name);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/profiles")

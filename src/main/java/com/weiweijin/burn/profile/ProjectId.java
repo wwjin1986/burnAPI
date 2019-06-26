@@ -7,6 +7,4 @@ import java.util.Date;
 public class ProjectId implements Serializable{
 
 	String name;
-	int weight;
-	LocalDateTime date;
 }

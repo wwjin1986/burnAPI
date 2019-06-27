@@ -27,14 +27,15 @@ public class WeightResource {
 	
 	@RequestMapping(method=RequestMethod.GET, value = "/profiles/weiwei/weights")
 	public List<Weight> getWeights() {
-		System.out.println("get all records");
 		return weightService.getAllWeights();
 	}
 	
 	
 	@RequestMapping(method=RequestMethod.POST, value="/profiles/Weiwei")
-	public void addNewWeight(@RequestBody Weight weight) {
+	public void  addNewWeight(@RequestBody Weight weight) {
 		weightService.addNewWeight(weight);		
+		System.out.println("added");
+		
 	}
 	
 	@RequestMapping(method = RequestMethod.DELETE, value="/profiles/Weiwei/{id}")

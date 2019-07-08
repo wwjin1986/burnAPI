@@ -20,10 +20,10 @@ public class WeightResource {
 	@Autowired
 	private WeightService weightService;
 	
-	@RequestMapping(method=RequestMethod.OPTIONS, value = "/profiles/Weiwei/{id}")
-	public void options() {
-		
-	}
+//	@RequestMapping(method=RequestMethod.OPTIONS, value = "/profiles/Weiwei/{id}")
+//	public void options() {
+//		
+//	}
 	
 	@RequestMapping(method=RequestMethod.GET, value = "/profiles/weiwei/weights")
 	public List<Weight> getWeights() {

@@ -16,6 +16,7 @@ public class Profile {
 	private int weight;
 	private int height;
 	private int age;
+	private int dailyGoal;
 	
 	public Profile() {
 	
@@ -27,6 +28,12 @@ public class Profile {
 		this.age = age;
 	}
 
+	public int getDailyGoal() {
+		return dailyGoal;
+	}
+	public void setDailyGoal(int dailyGoal) {
+		this.dailyGoal = dailyGoal;
+	}
 	public String getName() {
 		return name;
 	}

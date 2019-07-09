@@ -27,6 +27,11 @@ public class ProfileService {
 		profileRepository.delete(profile);
 	}
 	
+	public void updateProfileDailyGoal(String name, int dailyGoal) {
+		Profile p = profileRepository.findById(name).orElse(null);
+		p.setDailyGoal(dailyGoal);
+		profileRepository.save(p);
+	}
 	public Profile getProfileByName(String name) {
 		//get null when Profile not found
 		return profileRepository.findById(name).orElse(null);

@@ -33,6 +33,11 @@ public class profileResource {
 		profileService.addProfile(profile);
 	}
 	
+	@RequestMapping(method=RequestMethod.POST, value="profiles/Weiwei/{dailyGoal}")
+	public void updateDailyGoal(@PathVariable int dailyGoal) {
+	profileService.updateProfileDailyGoal("Weiwei", dailyGoal);
+	}
+	
 	@RequestMapping(method=RequestMethod.DELETE, value="/profiles")
 	public void deleteProfile(@RequestBody Profile profile) {
 		profileService.deleteProfile(profile);

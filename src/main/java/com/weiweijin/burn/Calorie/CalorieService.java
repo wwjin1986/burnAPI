@@ -44,6 +44,9 @@ public class CalorieService {
 	}
 	public void addCalorieBurned(Calorie calorie) {
 		calorieRepository.save(calorie);
-		System.out.println(calorie.getCalorieBurned());
+	}
+	
+	public void deleteExerciseRecordById(Long id) {
+		calorieRepository.deleteById(id);
 	}
 }

@@ -43,4 +43,11 @@ public class CalorieResource {
 	public void addCalorieBurned(@RequestBody Calorie calorie) {
 		calorieService.addCalorieBurned(calorie);
 	}
+	
+	@RequestMapping(method = RequestMethod.DELETE, value = "/profiles/Weiwei/calories/{id}")
+	public void deleteExerciseRecordById(@PathVariable Long id) {
+		calorieService.deleteExerciseRecordById(id);
+		System.out.println("delete record by id"+id);
+	}
+	
 }
